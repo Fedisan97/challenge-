@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner gg = new Scanner(System.in);
+        //надо сделать 6 уровней
+        //1.1-50 5 6 попыток
+        //2.1-250 10 попыток
+        //3.1-500 12 попыток
+        //4.1-1025 14 попыток
+        //5.1-2000 17 попыток
+        //6.1-1-5000 20 попыток
+        System.out.println("Выберите уровень сложности\n1-Самый лёгкий\n2-Лёгкий\n3-Средний\n4-Сложный\n5-Невозможный\n6-200iQ");
+        String nu = gg.nextLine();
+
+        switch (nu) {
+            case "1":
+                // Загадано случайное число от 1 до 50
+                int random = (int) (Math.random() * 50) + 1;
+                int xodi = 6;
+                System.out.println("Угадай загаданное число от 1 до 50:");
+
+                while (xodi > 0) {
+                    System.out.printf("Попытка №%d: ", 7 - xodi);
+                    int Chislo = Integer.parseInt(gg.nextLine());
+
+                    // Проверка
+                    if (Chislo < 1 || Chislo > 50) {
+                        System.out.println("Пожалуйста, введите число от 1 до 50.");
+                        continue;
+                    }
+
+                    if (Chislo == random) {
+                        System.out.println("Верно! Вы угадали число");
+                        break;
+                    } else if (Chislo < random) {
+                        System.out.println("Ваше число меньше загаданного");
+                    } else {
+                        System.out.println("Ваше число больше загаданного");
+                    }
+
+                    xodi--;
+
+                    if (xodi == 0) {
+                        System.out.println("Вы исчерпали все попытки. Загаданное число было: " + random);
+                    }
+                }
+            case "2":
+
+
+
+
+                break;
+            default:
+                System.out.println("Неизвестная команда");
+                break;
+        }
+
+        gg.close();
+    }
+}
