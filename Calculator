@@ -5,7 +5,7 @@ public class Main{
         Scanner gg = new Scanner(System.in); 
 
         System.out.println("Напишите первое число: ");
-        double num1 = gg.nextDouble();
+        double num1 = gg.nextDouble(); 
         System.out.print("Напишите второе число: ");
         double num2 = gg.nextDouble();
 
