@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
         Scanner gg = new Scanner(System.in); 
-
+                       
         System.out.println("Напишите первое число: ");
         double num1 = gg.nextDouble(); 
         System.out.print("Напишите второе число: ");
