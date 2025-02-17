@@ -36,7 +36,7 @@ switch (operation) {
             break;
         }
 
-
+ 
         default:
         System.out.println("Введена неверная операция");
         return;
