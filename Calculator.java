@@ -40,7 +40,7 @@ switch (operation) {
         default:
         System.out.println("Введена неверная операция");
         return;
-
+ 
 
 }
         System.out.printf("%.4f %s %.4f = %.4f%n", num1, operation, num2, jjj );
