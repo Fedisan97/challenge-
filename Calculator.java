@@ -14,7 +14,7 @@ public class Main{
 System.out.println("Выбрать действие(+,-,*,/): ");
   
 operation = gg.next();
-
+ 
 switch (operation) {
     case "+":
         jjj = num1 + num2;
