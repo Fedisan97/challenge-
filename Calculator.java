@@ -8,7 +8,7 @@ public class Main{
         double num1 = gg.nextDouble(); 
         System.out.print("Напишите второе число: ");
         double num2 = gg.nextDouble();
-
+ 
         double jjj;
         String operation;
 System.out.println("Выбрать действие(+,-,*,/): ");
