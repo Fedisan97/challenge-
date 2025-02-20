@@ -12,7 +12,7 @@ public class Main{
         double jjj;
         String operation;
 System.out.println("Выбрать действие(+,-,*,/): ");
- 
+  
 operation = gg.next();
 
 switch (operation) {
