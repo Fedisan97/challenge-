@@ -1,0 +1,51 @@
+// изменить цвет
+
+ 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>чат</title> 
+</head>
+<body>
+    <h1>чат</h1>
+    
+    <!-- Форма для ввода сообщения -->
+    <form id="chatForm">
+        <textarea name="message" placeholder="Ваше сообщение"></textarea><br>
+        <input type="submit" value="Отправить">
+    </form>
+    
+    <!-- Окно для отображения истории сообщений -->
+    <div id="messagesContainer"></div>
+    
+    <!-- Скрипт для обработки формы и добавления сообщений в окно -->
+    <script>
+        const chatForm = document.getElementById('chatForm');
+        const messagesContainer = document.getElementById('messagesContainer');
+        
+        // Функция для добавления сообщения в историю
+        function addMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = `${new Date().toLocaleTimeString()} ${message}`;
+            messagesContainer.appendChild(messageElement);
+            
+            // Скролим вниз до конца окна сообщений
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        // Обработка отправки сообщения
+        chatForm.addEventListener('submit', event => {
+            event.preventDefault();
+            
+            const message = chatForm.elements['message'].value;
+            if (message.trim() !== '') {
+                addMessage(`Вы: ${message}`);
+                
+                // Очистка поля ввода после отправки
+                chatForm.elements['message'].value = '';
+            }
+        });
+    </script>
+</body>
+</html>
