@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Выберите уровень сложности:");
+        System.out.println("1 - Самый легкий (1-50, 6 попыток)");
+        System.out.println("2 - Легкий (1-250, 10 попыток)");
+        System.out.println("3 - Средний (1-500, 12 попыток)");
+        System.out.println("4 - Сложный (1-1025, 15 попыток)");
+        System.out.println("5 - Невозможный (1-2000, 17 попыток)");
+        System.out.println("6 - 200IQ (1-5000, 20 попыток)");
